@@ -17,3 +17,9 @@ jobs:
         run: python3 -m unittest discover -s tests
       - name: 端到端 demo
         run: python3 -m driveloop.cli --demo
+      - name: 真实数据评测
+        run: |
+          python3 scripts/eval_real_dataset.py \
+            --data-dir data/real/driving_longtail \
+            --out /tmp/real_eval.json \
+            --dataset-name driveloop-real-longtail-mini

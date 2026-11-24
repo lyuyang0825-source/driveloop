@@ -1,0 +1,135 @@
+{
+  "dataset": "driveloop-ngsim-mini",
+  "license": "CC-BY-SA-3.0",
+  "source": "NGSIM US-101",
+  "source_url": "https://data.transportation.gov/Automobiles/Next-Generation-Simulation-NGSIM-Vehicle-Trajector/8ect-6jqj",
+  "citation": "FHWA, Next Generation Simulation (NGSIM) Vehicle Trajectories and Supporting Data.",
+  "clips": [
+    {
+      "clip_id": "ngsim_0001_cutin",
+      "source": "NGSIM US-101",
+      "file": "clips/ngsim_0001_cutin.csv",
+      "sha256_16": "2a8204f53347fdc1",
+      "frames": 50,
+      "ego_id": "689",
+      "start_frame": 1790
+    },
+    {
+      "clip_id": "ngsim_0002_cutin",
+      "source": "NGSIM US-101",
+      "file": "clips/ngsim_0002_cutin.csv",
+      "sha256_16": "47778f505974a06d",
+      "frames": 50,
+      "ego_id": "1722",
+      "start_frame": 5009
+    },
+    {
+      "clip_id": "ngsim_0003_cutin",
+      "source": "NGSIM US-101",
+      "file": "clips/ngsim_0003_cutin.csv",
+      "sha256_16": "56ec9e4f04f16f7a",
+      "frames": 50,
+      "ego_id": "983",
+      "start_frame": 2644
+    },
+    {
+      "clip_id": "ngsim_0004_cutin",
+      "source": "NGSIM US-101",
+      "file": "clips/ngsim_0004_cutin.csv",
+      "sha256_16": "602c6766ccca95d2",
+      "frames": 50,
+      "ego_id": "2158",
+      "start_frame": 6459
+    },
+    {
+      "clip_id": "ngsim_0005_cutin",
+      "source": "NGSIM US-101",
+      "file": "clips/ngsim_0005_cutin.csv",
+      "sha256_16": "0412de1617340b87",
+      "frames": 50,
+      "ego_id": "617",
+      "start_frame": 1641
+    },
+    {
+      "clip_id": "ngsim_0006_cutin",
+      "source": "NGSIM US-101",
+      "file": "clips/ngsim_0006_cutin.csv",
+      "sha256_16": "e1c49ce486ccc006",
+      "frames": 50,
+      "ego_id": "2566",
+      "start_frame": 7421
+    },
+    {
+      "clip_id": "ngsim_0007_cutin",
+      "source": "NGSIM US-101",
+      "file": "clips/ngsim_0007_cutin.csv",
+      "sha256_16": "8175fc01a4baa333",
+      "frames": 50,
+      "ego_id": "2743",
+      "start_frame": 8039
+    },
+    {
+      "clip_id": "ngsim_0008_cutin",
+      "source": "NGSIM US-101",
+      "file": "clips/ngsim_0008_cutin.csv",
+      "sha256_16": "fa411cfd9e8c3f62",
+      "frames": 50,
+      "ego_id": "1984",
+      "start_frame": 5644
+    },
+    {
+      "clip_id": "ngsim_0009_cutin",
+      "source": "NGSIM US-101",
+      "file": "clips/ngsim_0009_cutin.csv",
+      "sha256_16": "9e4937fe4ea0d67e",
+      "frames": 50,
+      "ego_id": "1969",
+      "start_frame": 5655
+    },
+    {
+      "clip_id": "ngsim_0010_cutin",
+      "source": "NGSIM US-101",
+      "file": "clips/ngsim_0010_cutin.csv",
+      "sha256_16": "92b154bb99df9b81",
+      "frames": 50,
+      "ego_id": "997",
+      "start_frame": 2427
+    },
+    {
+      "clip_id": "ngsim_0011_negative",
+      "source": "NGSIM US-101",
+      "file": "clips/ngsim_0011_negative.csv",
+      "sha256_16": "349a00f13b9fd55a",
+      "frames": 50,
+      "ego_id": "5",
+      "start_frame": 280
+    },
+    {
+      "clip_id": "ngsim_0012_negative",
+      "source": "NGSIM US-101",
+      "file": "clips/ngsim_0012_negative.csv",
+      "sha256_16": "c90c05b309162fe1",
+      "frames": 50,
+      "ego_id": "9",
+      "start_frame": 280
+    },
+    {
+      "clip_id": "ngsim_0013_negative",
+      "source": "NGSIM US-101",
+      "file": "clips/ngsim_0013_negative.csv",
+      "sha256_16": "8f7360eb1e469004",
+      "frames": 50,
+      "ego_id": "20",
+      "start_frame": 280
+    },
+    {
+      "clip_id": "ngsim_0014_negative",
+      "source": "NGSIM US-101",
+      "file": "clips/ngsim_0014_negative.csv",
+      "sha256_16": "667be0afd9907b91",
+      "frames": 50,
+      "ego_id": "25",
+      "start_frame": 330
+    }
+  ]
+}

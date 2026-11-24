@@ -38,7 +38,7 @@ git clone https://github.com/lyuyang0825-source/driveloop.git
 cd driveloop
 
 python3 -m driveloop.cli --demo          # 合成日志 → 挖掘 → 场景卡 → OSC → 回归 → HTML
-python3 -m unittest discover -s tests    # 13 tests
+python3 -m unittest discover -s tests    # 16 tests
 ```
 
 `--demo` 会生成 90 秒 / 10Hz 合成日志，挖出 6 个场景，跑一次 baseline vs candidate 回归，并把结果写到 `demo_out/`。
@@ -68,6 +68,37 @@ python3 -m driveloop.cli --regress data/runs/baseline_v1.json data/runs/candidat
 | SC-006 | 施工路段 | 85.0–90.0s | 25 | — | — |
 
 回归 demo：候选版本在 SC-001 出现新碰撞、SC-002 的 TTC 降到 1.7s，门禁 `block`（fail 2 / pass 4）。
+
+
+## 真实数据验证（30 段）
+
+合成日志只能跑通链路，不能证明对真实数据的鲁棒性。仓库里带了一份 **2.5MB / 30 段的真实轨迹验证集**：
+
+- **NGSIM US-101**：10 段严格同向 cut-in + 4 段高速跟驰负例；
+- **Argoverse 2**：8 段 AV 城市 near-miss + 3 段 VRU + 5 段城市负例。
+
+30 段 × 50 帧 × 10Hz，21 正例 / 9 负例。检测器结果：
+
+| 类型 | 支持数 | Precision | Recall | F1 |
+|---|---:|---:|---:|---:|
+| `cut_in`（含 6 个路径侵入 proxy） | 16 | 1.00 | 1.00 | 1.00 |
+| `near_miss` | 8 | 0.89 | 1.00 | 0.94 |
+| `vru_sudden` | 3 | 1.00 | 1.00 | 1.00 |
+
+微平均 **P 0.96 / R 1.00 / F1 0.98**，9 段负例误报 0。
+
+但 16 个 `cut_in` 里只有 **10 个是严格同向变道**，另外 6 个是交叉口横穿/对向目标进入路径。按严格 cut-in 口径，precision 只有 0.62——这正是没有地图和车道方向时的真实语义缺口。数据卡里把两组数都列了，没有把 16/16 包装成“变道 100%”。
+
+<img src="docs/assets/real_dataset_preview.png" width="860" alt="真实数据四联预览">
+
+```bash
+python3 scripts/eval_real_dataset.py \
+  --data-dir data/real/driving_longtail \
+  --out data/real/driving_longtail/eval_report.json \
+  --dataset-name driveloop-real-longtail-mini
+```
+
+数据卡：[`data/real/driving_longtail/DATA_CARD.md`](data/real/driving_longtail/DATA_CARD.md)（选择规则、字段映射、许可、限制）。NGSIM 是 CC BY-SA 3.0，Argoverse 是 CC BY-NC-SA 4.0，派生数据按 **CC BY-NC-SA 4.0** 分发，禁止商用。
 
 ## 检测器
 
@@ -114,7 +145,7 @@ CSV，一行一个 10Hz 帧，字段见 `driveloop/schema.py`：
 | `weather` / `visibility_m` | 天气、能见度 |
 | `road_type` / `speed_limit_kph` | 路型、限速 |
 | `driver_state` | `engaged` / `takeover` / `disengaged` |
-| `objects` | 感知目标列表：`id:cls:dist_m:rel_speed_kph:lat_m:in_path`，用 `|` 分隔 |
+| `objects` | 感知目标 JSON 列表，每个元素含 `id/cls/dist_m/rel_speed_kph/lat_m/in_path`；CSV 里是 JSON 字符串 |
 
 `objects` 里的 `in_path` 是“是否在本车规划路径内”，这一位比经纬度更关键：它决定了 TTC 和 cut-in 能不能算。
 
@@ -146,7 +177,8 @@ demo_out/
 
 ## 路线图
 
-- [ ] 接入真实数据集格式（nuScenes / OpenDV / ROS bag 转换）
+- [x] 接入真实数据集格式（NGSIM / Argoverse 2 → CSV）
+- [ ] 接入 nuScenes / OpenDV / ROS bag 转换
 - [ ] 主动学习采样：按场景密度与模型不确定性挑帧
 - [ ] 4D 自动标注：离线大模型预标 + 人工抽检
 - [ ] 场景生成：对高危场景做 NeRF/扩散增广
@@ -159,6 +191,8 @@ driveloop/
 ├── driveloop/
 │   ├── schema.py     # CSV 字段、Frame/Track、读写
 │   ├── synth.py      # 90 秒 / 10Hz 合成日志
+│   ├── argoverse.py  # Argoverse 2 -> Frame
+│   ├── ngsim.py      # NGSIM US-101 -> Frame
 │   ├── detect.py     # 8 类检测器、事件合并、场景聚类
 │   ├── scenario.py   # 场景卡、OpenSCENARIO 骨架
 │   ├── regression.py # 基线/候选对比与门禁
@@ -166,8 +200,9 @@ driveloop/
 │   └── cli.py
 ├── data/
 │   ├── logs/         # 合成日志（--demo 重建）
+│   ├── real/         # 真实数据（driving_longtail 30 段 + 源目录）
 │   └── runs/         # baseline / candidate 指标
-├── tests/            # 13 个单测
+├── tests/            # 16 个单测
 ├── demo_out/         # 场景卡、OSC、回归、报告
 ├── docs/
 │   ├── industry.md

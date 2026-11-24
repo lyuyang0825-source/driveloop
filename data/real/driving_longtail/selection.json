@@ -1,0 +1,42 @@
+{
+  "near_miss": [
+    "av2_0007_nearmiss",
+    "av2_0008_nearmiss",
+    "av2_0009_nearmiss",
+    "av2_0010_nearmiss",
+    "av2_0011_nearmiss",
+    "av2_0012_nearmiss",
+    "av2_0013_nearmiss",
+    "av2_0014_nearmiss"
+  ],
+  "vru_sudden": [
+    "av2_0017_vru",
+    "av2_0018_vru",
+    "av2_0019_vru"
+  ],
+  "negative_argoverse": [
+    "av2_0020_negative",
+    "av2_0021_negative",
+    "av2_0022_negative",
+    "av2_0023_negative",
+    "av2_0024_negative"
+  ],
+  "cut_in_ngsim": [
+    "ngsim_0001_cutin",
+    "ngsim_0002_cutin",
+    "ngsim_0003_cutin",
+    "ngsim_0004_cutin",
+    "ngsim_0005_cutin",
+    "ngsim_0006_cutin",
+    "ngsim_0007_cutin",
+    "ngsim_0008_cutin",
+    "ngsim_0009_cutin",
+    "ngsim_0010_cutin"
+  ],
+  "negative_ngsim": [
+    "ngsim_0011_negative",
+    "ngsim_0012_negative",
+    "ngsim_0013_negative",
+    "ngsim_0014_negative"
+  ]
+}

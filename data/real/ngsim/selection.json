@@ -1,0 +1,92 @@
+{
+  "dataset": "driveloop-ngsim-mini",
+  "version": "0.1.0",
+  "source": "NGSIM US-101 07:50–08:05",
+  "license": "CC-BY-SA-3.0",
+  "clips": [
+    {
+      "clip_id": "ngsim_0001_cutin",
+      "ego_id": 689,
+      "center_frame": 1810,
+      "note": "true same-direction cut-in"
+    },
+    {
+      "clip_id": "ngsim_0002_cutin",
+      "ego_id": 1722,
+      "center_frame": 5029,
+      "note": "true same-direction cut-in"
+    },
+    {
+      "clip_id": "ngsim_0003_cutin",
+      "ego_id": 983,
+      "center_frame": 2664,
+      "note": "true same-direction cut-in"
+    },
+    {
+      "clip_id": "ngsim_0004_cutin",
+      "ego_id": 2158,
+      "center_frame": 6479,
+      "note": "true same-direction cut-in"
+    },
+    {
+      "clip_id": "ngsim_0005_cutin",
+      "ego_id": 617,
+      "center_frame": 1661,
+      "note": "true same-direction cut-in"
+    },
+    {
+      "clip_id": "ngsim_0006_cutin",
+      "ego_id": 2566,
+      "center_frame": 7441,
+      "note": "true same-direction cut-in"
+    },
+    {
+      "clip_id": "ngsim_0007_cutin",
+      "ego_id": 2743,
+      "center_frame": 8059,
+      "note": "true same-direction cut-in"
+    },
+    {
+      "clip_id": "ngsim_0008_cutin",
+      "ego_id": 1984,
+      "center_frame": 5664,
+      "note": "true same-direction cut-in"
+    },
+    {
+      "clip_id": "ngsim_0009_cutin",
+      "ego_id": 1969,
+      "center_frame": 5675,
+      "note": "true same-direction cut-in"
+    },
+    {
+      "clip_id": "ngsim_0010_cutin",
+      "ego_id": 997,
+      "center_frame": 2447,
+      "note": "true same-direction cut-in"
+    },
+    {
+      "clip_id": "ngsim_0011_negative",
+      "ego_id": 5,
+      "center_frame": 300,
+      "note": "highway car-following negative"
+    },
+    {
+      "clip_id": "ngsim_0012_negative",
+      "ego_id": 9,
+      "center_frame": 300,
+      "note": "highway car-following negative"
+    },
+    {
+      "clip_id": "ngsim_0013_negative",
+      "ego_id": 20,
+      "center_frame": 300,
+      "note": "highway car-following negative"
+    },
+    {
+      "clip_id": "ngsim_0014_negative",
+      "ego_id": 25,
+      "center_frame": 350,
+      "note": "highway car-following negative"
+    }
+  ]
+}

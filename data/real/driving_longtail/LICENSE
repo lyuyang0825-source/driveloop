@@ -1,0 +1,34 @@
+# 数据许可摘要
+
+本目录（`data/real/driving_longtail/`）包含来自两个公开数据集的派生轨迹 CSV。
+
+## 1. NGSIM
+
+- 来源：Federal Highway Administration (FHWA) / U.S. Department of Transportation
+- 数据集：Next Generation Simulation (NGSIM) Vehicle Trajectories and Supporting Data
+- 页面：https://data.transportation.gov/Automobiles/Next-Generation-Simulation-NGSIM-Vehicle-Trajector/8ect-6jqj
+- 许可：CC BY-SA 3.0
+- 署名：FHWA, Next Generation Simulation (NGSIM) Vehicle Trajectories and Supporting Data.
+
+## 2. Argoverse 2
+
+- 来源：Argoverse 2 Motion Forecasting
+- 页面：https://www.argoverse.org/av2.html
+- 许可：CC BY-NC-SA 4.0
+- 署名：Wilson et al., Argoverse 2: Next Generation Datasets for Self-Driving Perception and Forecasting, NeurIPS 2021 Datasets and Benchmarks.
+
+## 3. 本目录的派生数据
+
+- 30 段 CSV、`labels.jsonl`、`manifest.json`、`eval_report.*` 属于上述数据的派生作品。
+- 因为同时包含 CC BY-NC-SA 4.0 数据，本目录整体按 **CC BY-NC-SA 4.0** 分发。
+- **禁止商业使用**（NonCommercial）。
+- 再分发必须保留署名、许可链接，并以相同方式共享（ShareAlike）。
+- 原始 NGSIM txt、Argoverse parquet 不随本仓库分发。
+
+## 4. 代码
+
+仓库代码（`driveloop/`、`scripts/`、`tests/`）仍按根目录 MIT License 分发。代码许可不覆盖本目录的数据。
+
+## 5. 免责声明
+
+本数据集仅用于工程验证、教学和面试讲解，不构成安全认证、量产结论或任何形式的合规背书。使用方应自行确认其使用场景符合两源许可与当地法规。

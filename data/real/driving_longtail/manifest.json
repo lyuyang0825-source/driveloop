@@ -1,0 +1,265 @@
+{
+  "dataset": "driveloop-real-longtail-mini",
+  "version": "0.2.0",
+  "sources": [
+    {
+      "name": "NGSIM US-101",
+      "license": "CC-BY-SA-3.0",
+      "url": "https://data.transportation.gov/Automobiles/Next-Generation-Simulation-NGSIM-Vehicle-Trajector/8ect-6jqj",
+      "role": "同向 cut-in、高速跟驰负例"
+    },
+    {
+      "name": "Argoverse 2 Motion Forecasting",
+      "license": "CC-BY-NC-SA-4.0",
+      "url": "https://www.argoverse.org/av2.html",
+      "role": "AV 城市 near-miss、VRU、负例"
+    }
+  ],
+  "counts": {
+    "clips": 30,
+    "positive": 21,
+    "negative": 9
+  },
+  "clips": [
+    {
+      "clip_id": "ngsim_0001_cutin",
+      "source": "NGSIM US-101",
+      "license": "CC-BY-SA-3.0",
+      "file": "clips/ngsim_0001_cutin.csv",
+      "sha256_16": "2a8204f53347fdc1",
+      "frames": 50
+    },
+    {
+      "clip_id": "ngsim_0002_cutin",
+      "source": "NGSIM US-101",
+      "license": "CC-BY-SA-3.0",
+      "file": "clips/ngsim_0002_cutin.csv",
+      "sha256_16": "47778f505974a06d",
+      "frames": 50
+    },
+    {
+      "clip_id": "ngsim_0003_cutin",
+      "source": "NGSIM US-101",
+      "license": "CC-BY-SA-3.0",
+      "file": "clips/ngsim_0003_cutin.csv",
+      "sha256_16": "56ec9e4f04f16f7a",
+      "frames": 50
+    },
+    {
+      "clip_id": "ngsim_0004_cutin",
+      "source": "NGSIM US-101",
+      "license": "CC-BY-SA-3.0",
+      "file": "clips/ngsim_0004_cutin.csv",
+      "sha256_16": "602c6766ccca95d2",
+      "frames": 50
+    },
+    {
+      "clip_id": "ngsim_0005_cutin",
+      "source": "NGSIM US-101",
+      "license": "CC-BY-SA-3.0",
+      "file": "clips/ngsim_0005_cutin.csv",
+      "sha256_16": "0412de1617340b87",
+      "frames": 50
+    },
+    {
+      "clip_id": "ngsim_0006_cutin",
+      "source": "NGSIM US-101",
+      "license": "CC-BY-SA-3.0",
+      "file": "clips/ngsim_0006_cutin.csv",
+      "sha256_16": "e1c49ce486ccc006",
+      "frames": 50
+    },
+    {
+      "clip_id": "ngsim_0007_cutin",
+      "source": "NGSIM US-101",
+      "license": "CC-BY-SA-3.0",
+      "file": "clips/ngsim_0007_cutin.csv",
+      "sha256_16": "8175fc01a4baa333",
+      "frames": 50
+    },
+    {
+      "clip_id": "ngsim_0008_cutin",
+      "source": "NGSIM US-101",
+      "license": "CC-BY-SA-3.0",
+      "file": "clips/ngsim_0008_cutin.csv",
+      "sha256_16": "fa411cfd9e8c3f62",
+      "frames": 50
+    },
+    {
+      "clip_id": "ngsim_0009_cutin",
+      "source": "NGSIM US-101",
+      "license": "CC-BY-SA-3.0",
+      "file": "clips/ngsim_0009_cutin.csv",
+      "sha256_16": "9e4937fe4ea0d67e",
+      "frames": 50
+    },
+    {
+      "clip_id": "ngsim_0010_cutin",
+      "source": "NGSIM US-101",
+      "license": "CC-BY-SA-3.0",
+      "file": "clips/ngsim_0010_cutin.csv",
+      "sha256_16": "92b154bb99df9b81",
+      "frames": 50
+    },
+    {
+      "clip_id": "ngsim_0011_negative",
+      "source": "NGSIM US-101",
+      "license": "CC-BY-SA-3.0",
+      "file": "clips/ngsim_0011_negative.csv",
+      "sha256_16": "349a00f13b9fd55a",
+      "frames": 50
+    },
+    {
+      "clip_id": "ngsim_0012_negative",
+      "source": "NGSIM US-101",
+      "license": "CC-BY-SA-3.0",
+      "file": "clips/ngsim_0012_negative.csv",
+      "sha256_16": "c90c05b309162fe1",
+      "frames": 50
+    },
+    {
+      "clip_id": "ngsim_0013_negative",
+      "source": "NGSIM US-101",
+      "license": "CC-BY-SA-3.0",
+      "file": "clips/ngsim_0013_negative.csv",
+      "sha256_16": "8f7360eb1e469004",
+      "frames": 50
+    },
+    {
+      "clip_id": "ngsim_0014_negative",
+      "source": "NGSIM US-101",
+      "license": "CC-BY-SA-3.0",
+      "file": "clips/ngsim_0014_negative.csv",
+      "sha256_16": "667be0afd9907b91",
+      "frames": 50
+    },
+    {
+      "clip_id": "av2_0007_nearmiss",
+      "source": "Argoverse 2 Motion Forecasting",
+      "license": "CC-BY-NC-SA-4.0",
+      "file": "clips/av2_0007_nearmiss.csv",
+      "sha256_16": "a4f86e33f90c3c15",
+      "frames": 50
+    },
+    {
+      "clip_id": "av2_0008_nearmiss",
+      "source": "Argoverse 2 Motion Forecasting",
+      "license": "CC-BY-NC-SA-4.0",
+      "file": "clips/av2_0008_nearmiss.csv",
+      "sha256_16": "26c58f15de1945ae",
+      "frames": 50
+    },
+    {
+      "clip_id": "av2_0009_nearmiss",
+      "source": "Argoverse 2 Motion Forecasting",
+      "license": "CC-BY-NC-SA-4.0",
+      "file": "clips/av2_0009_nearmiss.csv",
+      "sha256_16": "30f3b1486c52377f",
+      "frames": 50
+    },
+    {
+      "clip_id": "av2_0010_nearmiss",
+      "source": "Argoverse 2 Motion Forecasting",
+      "license": "CC-BY-NC-SA-4.0",
+      "file": "clips/av2_0010_nearmiss.csv",
+      "sha256_16": "b7ce9ac2bf2adf85",
+      "frames": 50
+    },
+    {
+      "clip_id": "av2_0011_nearmiss",
+      "source": "Argoverse 2 Motion Forecasting",
+      "license": "CC-BY-NC-SA-4.0",
+      "file": "clips/av2_0011_nearmiss.csv",
+      "sha256_16": "e6292e4ea8d41b4a",
+      "frames": 50
+    },
+    {
+      "clip_id": "av2_0012_nearmiss",
+      "source": "Argoverse 2 Motion Forecasting",
+      "license": "CC-BY-NC-SA-4.0",
+      "file": "clips/av2_0012_nearmiss.csv",
+      "sha256_16": "1233340e1f8402fe",
+      "frames": 50
+    },
+    {
+      "clip_id": "av2_0013_nearmiss",
+      "source": "Argoverse 2 Motion Forecasting",
+      "license": "CC-BY-NC-SA-4.0",
+      "file": "clips/av2_0013_nearmiss.csv",
+      "sha256_16": "c768d8dcf1462bbe",
+      "frames": 50
+    },
+    {
+      "clip_id": "av2_0014_nearmiss",
+      "source": "Argoverse 2 Motion Forecasting",
+      "license": "CC-BY-NC-SA-4.0",
+      "file": "clips/av2_0014_nearmiss.csv",
+      "sha256_16": "007128c7047b0e8b",
+      "frames": 50
+    },
+    {
+      "clip_id": "av2_0017_vru",
+      "source": "Argoverse 2 Motion Forecasting",
+      "license": "CC-BY-NC-SA-4.0",
+      "file": "clips/av2_0017_vru.csv",
+      "sha256_16": "70c858fbc1d03378",
+      "frames": 50
+    },
+    {
+      "clip_id": "av2_0018_vru",
+      "source": "Argoverse 2 Motion Forecasting",
+      "license": "CC-BY-NC-SA-4.0",
+      "file": "clips/av2_0018_vru.csv",
+      "sha256_16": "2ba723e1df1ae8c7",
+      "frames": 50
+    },
+    {
+      "clip_id": "av2_0019_vru",
+      "source": "Argoverse 2 Motion Forecasting",
+      "license": "CC-BY-NC-SA-4.0",
+      "file": "clips/av2_0019_vru.csv",
+      "sha256_16": "f54447cba4de091b",
+      "frames": 50
+    },
+    {
+      "clip_id": "av2_0020_negative",
+      "source": "Argoverse 2 Motion Forecasting",
+      "license": "CC-BY-NC-SA-4.0",
+      "file": "clips/av2_0020_negative.csv",
+      "sha256_16": "55426114d98d0d58",
+      "frames": 50
+    },
+    {
+      "clip_id": "av2_0021_negative",
+      "source": "Argoverse 2 Motion Forecasting",
+      "license": "CC-BY-NC-SA-4.0",
+      "file": "clips/av2_0021_negative.csv",
+      "sha256_16": "0a7f3e99b1837cd3",
+      "frames": 50
+    },
+    {
+      "clip_id": "av2_0022_negative",
+      "source": "Argoverse 2 Motion Forecasting",
+      "license": "CC-BY-NC-SA-4.0",
+      "file": "clips/av2_0022_negative.csv",
+      "sha256_16": "ae7c3c18a9ea19b8",
+      "frames": 50
+    },
+    {
+      "clip_id": "av2_0023_negative",
+      "source": "Argoverse 2 Motion Forecasting",
+      "license": "CC-BY-NC-SA-4.0",
+      "file": "clips/av2_0023_negative.csv",
+      "sha256_16": "623c7970738d4ce9",
+      "frames": 50
+    },
+    {
+      "clip_id": "av2_0024_negative",
+      "source": "Argoverse 2 Motion Forecasting",
+      "license": "CC-BY-NC-SA-4.0",
+      "file": "clips/av2_0024_negative.csv",
+      "sha256_16": "d4bc30ed53634be5",
+      "frames": 50
+    }
+  ]
+}

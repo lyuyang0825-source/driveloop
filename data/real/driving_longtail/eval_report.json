@@ -1,0 +1,561 @@
+{
+  "dataset": "driveloop-real-longtail-mini",
+  "clips": 30,
+  "positive_clips": 21,
+  "negative_clips": 9,
+  "warnings_ttc_3_4s": 0,
+  "negative_clips_with_fp": 0,
+  "per_type": [
+    {
+      "type": "cut_in",
+      "label": "旁车切入",
+      "tp": 16,
+      "fp": 0,
+      "fn": 0,
+      "support": 16,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "type": "near_miss",
+      "label": "近碰撞（低 TTC）",
+      "tp": 8,
+      "fp": 1,
+      "fn": 0,
+      "support": 8,
+      "precision": 0.889,
+      "recall": 1.0,
+      "f1": 0.941
+    },
+    {
+      "type": "vru_sudden",
+      "label": "行人/两轮车突入",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "support": 3,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  ],
+  "strict_cut_in": {
+    "tp": 10,
+    "fp": 6,
+    "fn": 0,
+    "support": 10,
+    "precision": 0.625,
+    "recall": 1.0,
+    "f1": 0.769
+  },
+  "micro": {
+    "tp": 27,
+    "fp": 1,
+    "fn": 0,
+    "support": 27,
+    "precision": 0.964,
+    "recall": 1.0,
+    "f1": 0.982
+  },
+  "details": [
+    {
+      "clip_id": "av2_0007_nearmiss",
+      "labels": [
+        [
+          "near_miss",
+          0.2,
+          0.6
+        ]
+      ],
+      "predicted": [
+        [
+          "near_miss",
+          0.1,
+          0.6
+        ]
+      ],
+      "matched": 1
+    },
+    {
+      "clip_id": "av2_0008_nearmiss",
+      "labels": [
+        [
+          "cut_in",
+          1.7,
+          2.7
+        ],
+        [
+          "near_miss",
+          1.7,
+          2.2
+        ]
+      ],
+      "predicted": [
+        [
+          "near_miss",
+          1.7,
+          2.5
+        ],
+        [
+          "cut_in",
+          1.7,
+          2.7
+        ]
+      ],
+      "matched": 2
+    },
+    {
+      "clip_id": "av2_0009_nearmiss",
+      "labels": [
+        [
+          "cut_in",
+          0.7,
+          2.6
+        ],
+        [
+          "near_miss",
+          2.7,
+          3.0
+        ]
+      ],
+      "predicted": [
+        [
+          "cut_in",
+          0.7,
+          2.6
+        ],
+        [
+          "near_miss",
+          1.9,
+          3.1
+        ]
+      ],
+      "matched": 2
+    },
+    {
+      "clip_id": "av2_0010_nearmiss",
+      "labels": [
+        [
+          "cut_in",
+          3.1,
+          4.3
+        ],
+        [
+          "near_miss",
+          3.1,
+          4.0
+        ]
+      ],
+      "predicted": [
+        [
+          "near_miss",
+          3.1,
+          4.0
+        ],
+        [
+          "cut_in",
+          3.1,
+          4.3
+        ]
+      ],
+      "matched": 2
+    },
+    {
+      "clip_id": "av2_0011_nearmiss",
+      "labels": [
+        [
+          "cut_in",
+          2.6,
+          4.3
+        ],
+        [
+          "near_miss",
+          2.6,
+          3.1
+        ]
+      ],
+      "predicted": [
+        [
+          "near_miss",
+          2.6,
+          3.1
+        ],
+        [
+          "cut_in",
+          2.6,
+          4.3
+        ]
+      ],
+      "matched": 2
+    },
+    {
+      "clip_id": "av2_0012_nearmiss",
+      "labels": [
+        [
+          "cut_in",
+          2.9,
+          4.2
+        ],
+        [
+          "near_miss",
+          2.9,
+          3.0
+        ]
+      ],
+      "predicted": [
+        [
+          "near_miss",
+          2.9,
+          3.0
+        ],
+        [
+          "cut_in",
+          2.9,
+          4.2
+        ]
+      ],
+      "matched": 2
+    },
+    {
+      "clip_id": "av2_0013_nearmiss",
+      "labels": [
+        [
+          "near_miss",
+          2.5,
+          4.2
+        ]
+      ],
+      "predicted": [
+        [
+          "near_miss",
+          1.9,
+          4.2
+        ]
+      ],
+      "matched": 1
+    },
+    {
+      "clip_id": "av2_0014_nearmiss",
+      "labels": [
+        [
+          "near_miss",
+          2.1,
+          3.1
+        ]
+      ],
+      "predicted": [
+        [
+          "near_miss",
+          1.7,
+          3.1
+        ]
+      ],
+      "matched": 1
+    },
+    {
+      "clip_id": "av2_0017_vru",
+      "labels": [
+        [
+          "vru_sudden",
+          1.7,
+          2.1
+        ],
+        [
+          "cut_in",
+          4.2,
+          4.4
+        ]
+      ],
+      "predicted": [
+        [
+          "vru_sudden",
+          1.7,
+          2.1
+        ],
+        [
+          "near_miss",
+          4.2,
+          4.4
+        ],
+        [
+          "cut_in",
+          4.2,
+          4.4
+        ]
+      ],
+      "matched": 2
+    },
+    {
+      "clip_id": "av2_0018_vru",
+      "labels": [
+        [
+          "vru_sudden",
+          0.1,
+          1.5
+        ]
+      ],
+      "predicted": [
+        [
+          "vru_sudden",
+          0.1,
+          1.5
+        ]
+      ],
+      "matched": 1
+    },
+    {
+      "clip_id": "av2_0019_vru",
+      "labels": [
+        [
+          "vru_sudden",
+          4.6,
+          4.9
+        ]
+      ],
+      "predicted": [
+        [
+          "vru_sudden",
+          4.6,
+          4.9
+        ]
+      ],
+      "matched": 1
+    },
+    {
+      "clip_id": "av2_0020_negative",
+      "labels": [],
+      "predicted": [],
+      "matched": 0
+    },
+    {
+      "clip_id": "av2_0021_negative",
+      "labels": [],
+      "predicted": [],
+      "matched": 0
+    },
+    {
+      "clip_id": "av2_0022_negative",
+      "labels": [],
+      "predicted": [],
+      "matched": 0
+    },
+    {
+      "clip_id": "av2_0023_negative",
+      "labels": [],
+      "predicted": [],
+      "matched": 0
+    },
+    {
+      "clip_id": "av2_0024_negative",
+      "labels": [],
+      "predicted": [],
+      "matched": 0
+    },
+    {
+      "clip_id": "ngsim_0001_cutin",
+      "labels": [
+        [
+          "cut_in",
+          2.0,
+          2.6
+        ]
+      ],
+      "predicted": [
+        [
+          "cut_in",
+          1.9,
+          2.6
+        ]
+      ],
+      "matched": 1
+    },
+    {
+      "clip_id": "ngsim_0002_cutin",
+      "labels": [
+        [
+          "cut_in",
+          2.0,
+          2.6
+        ]
+      ],
+      "predicted": [
+        [
+          "cut_in",
+          2.0,
+          2.7
+        ]
+      ],
+      "matched": 1
+    },
+    {
+      "clip_id": "ngsim_0003_cutin",
+      "labels": [
+        [
+          "cut_in",
+          2.0,
+          2.6
+        ]
+      ],
+      "predicted": [
+        [
+          "cut_in",
+          1.9,
+          2.6
+        ]
+      ],
+      "matched": 1
+    },
+    {
+      "clip_id": "ngsim_0004_cutin",
+      "labels": [
+        [
+          "cut_in",
+          2.0,
+          2.6
+        ]
+      ],
+      "predicted": [
+        [
+          "cut_in",
+          1.9,
+          2.6
+        ]
+      ],
+      "matched": 1
+    },
+    {
+      "clip_id": "ngsim_0005_cutin",
+      "labels": [
+        [
+          "cut_in",
+          2.0,
+          2.6
+        ]
+      ],
+      "predicted": [
+        [
+          "cut_in",
+          1.7,
+          2.4
+        ]
+      ],
+      "matched": 1
+    },
+    {
+      "clip_id": "ngsim_0006_cutin",
+      "labels": [
+        [
+          "cut_in",
+          2.0,
+          2.6
+        ]
+      ],
+      "predicted": [
+        [
+          "cut_in",
+          1.8,
+          2.5
+        ]
+      ],
+      "matched": 1
+    },
+    {
+      "clip_id": "ngsim_0007_cutin",
+      "labels": [
+        [
+          "cut_in",
+          2.0,
+          2.6
+        ]
+      ],
+      "predicted": [
+        [
+          "cut_in",
+          1.9,
+          2.3
+        ]
+      ],
+      "matched": 1
+    },
+    {
+      "clip_id": "ngsim_0008_cutin",
+      "labels": [
+        [
+          "cut_in",
+          2.0,
+          2.6
+        ]
+      ],
+      "predicted": [
+        [
+          "cut_in",
+          1.7,
+          2.4
+        ]
+      ],
+      "matched": 1
+    },
+    {
+      "clip_id": "ngsim_0009_cutin",
+      "labels": [
+        [
+          "cut_in",
+          2.0,
+          2.6
+        ]
+      ],
+      "predicted": [
+        [
+          "cut_in",
+          3.4,
+          3.5
+        ]
+      ],
+      "matched": 1
+    },
+    {
+      "clip_id": "ngsim_0010_cutin",
+      "labels": [
+        [
+          "cut_in",
+          2.0,
+          2.6
+        ]
+      ],
+      "predicted": [
+        [
+          "cut_in",
+          1.3,
+          2.0
+        ]
+      ],
+      "matched": 1
+    },
+    {
+      "clip_id": "ngsim_0011_negative",
+      "labels": [],
+      "predicted": [],
+      "matched": 0
+    },
+    {
+      "clip_id": "ngsim_0012_negative",
+      "labels": [],
+      "predicted": [],
+      "matched": 0
+    },
+    {
+      "clip_id": "ngsim_0013_negative",
+      "labels": [],
+      "predicted": [],
+      "matched": 0
+    },
+    {
+      "clip_id": "ngsim_0014_negative",
+      "labels": [],
+      "predicted": [],
+      "matched": 0
+    }
+  ],
+  "note": "silver labels；near_miss 只评 TTC<3.0s，3–4s 计 warning；strict_cut_in 只把 NGSIM same_direction_cut_in 算严格同类，Argoverse path_intrusion_proxy 上的 cut_in 预测记 FP"
+}

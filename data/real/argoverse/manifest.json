@@ -1,0 +1,417 @@
+{
+  "dataset": "driveloop-argoverse-mini",
+  "version": "1.0",
+  "license": "CC-BY-NC-SA-4.0",
+  "source": "Argoverse 2 Motion Forecasting (val/train)",
+  "source_url": "https://www.argoverse.org/av2.html",
+  "citation": "Wilson et al., Argoverse 2: Next Generation Datasets for Self-Driving Perception and Forecasting, NeurIPS 2021 Datasets and Benchmarks.",
+  "clips": [
+    {
+      "clip_id": "av2_0001_cutin",
+      "scenario_id": "00bb46d3-2f4e-4c7b-95bd-51a65ff9670e",
+      "city": "pittsburgh",
+      "split": "val",
+      "file": "clips/av2_0001_cutin.csv",
+      "sha256_16": "67ec1edb48745054",
+      "frames": 50,
+      "mean_speed_kph": 10.9,
+      "max_objects": 22,
+      "event_types": [
+        "cut_in"
+      ]
+    },
+    {
+      "clip_id": "av2_0002_cutin",
+      "scenario_id": "02ed805c-5223-4a48-a9d1-3768bc72aa7c",
+      "city": "austin",
+      "split": "val",
+      "file": "clips/av2_0002_cutin.csv",
+      "sha256_16": "b2732e54c2a5d1da",
+      "frames": 50,
+      "mean_speed_kph": 14.2,
+      "max_objects": 7,
+      "event_types": [
+        "cut_in"
+      ]
+    },
+    {
+      "clip_id": "av2_0003_cutin",
+      "scenario_id": "0409d524-492d-4e54-81eb-69d1f564fd8c",
+      "city": "pittsburgh",
+      "split": "val",
+      "file": "clips/av2_0003_cutin.csv",
+      "sha256_16": "c94068cd66161368",
+      "frames": 50,
+      "mean_speed_kph": 2.0,
+      "max_objects": 19,
+      "event_types": [
+        "cut_in"
+      ]
+    },
+    {
+      "clip_id": "av2_0004_cutin",
+      "scenario_id": "0053f4de-28e0-4026-8730-caa74d325ff9",
+      "city": "austin",
+      "split": "train",
+      "file": "clips/av2_0004_cutin.csv",
+      "sha256_16": "4b7cfbc5386e48fb",
+      "frames": 50,
+      "mean_speed_kph": 20.4,
+      "max_objects": 20,
+      "event_types": [
+        "cut_in"
+      ]
+    },
+    {
+      "clip_id": "av2_0005_cutin",
+      "scenario_id": "00a9541f-a00c-45c6-9071-dec34f5f818b",
+      "city": "pittsburgh",
+      "split": "val",
+      "file": "clips/av2_0005_cutin.csv",
+      "sha256_16": "259c36550bdea15a",
+      "frames": 50,
+      "mean_speed_kph": 18.1,
+      "max_objects": 18,
+      "event_types": [
+        "cut_in"
+      ]
+    },
+    {
+      "clip_id": "av2_0006_cutin",
+      "scenario_id": "001c1d25-32f5-4ea6-ac02-e24ad293a3fd",
+      "city": "miami",
+      "split": "train",
+      "file": "clips/av2_0006_cutin.csv",
+      "sha256_16": "60835efebd875b60",
+      "frames": 50,
+      "mean_speed_kph": 8.2,
+      "max_objects": 12,
+      "event_types": [
+        "cut_in"
+      ]
+    },
+    {
+      "clip_id": "av2_0007_nearmiss",
+      "scenario_id": "008415aa-6a7d-4c51-9b82-f29bc76f7f28",
+      "city": "pittsburgh",
+      "split": "val",
+      "file": "clips/av2_0007_nearmiss.csv",
+      "sha256_16": "a4f86e33f90c3c15",
+      "frames": 50,
+      "mean_speed_kph": 38.3,
+      "max_objects": 24,
+      "event_types": [
+        "near_miss"
+      ]
+    },
+    {
+      "clip_id": "av2_0008_nearmiss",
+      "scenario_id": "00e21119-f350-4664-b77e-18823533a1a6",
+      "city": "miami",
+      "split": "val",
+      "file": "clips/av2_0008_nearmiss.csv",
+      "sha256_16": "26c58f15de1945ae",
+      "frames": 50,
+      "mean_speed_kph": 22.2,
+      "max_objects": 24,
+      "event_types": [
+        "cut_in",
+        "near_miss"
+      ]
+    },
+    {
+      "clip_id": "av2_0009_nearmiss",
+      "scenario_id": "0168106d-6aac-4b54-adec-fb9996040418",
+      "city": "pittsburgh",
+      "split": "val",
+      "file": "clips/av2_0009_nearmiss.csv",
+      "sha256_16": "30f3b1486c52377f",
+      "frames": 50,
+      "mean_speed_kph": 24.7,
+      "max_objects": 24,
+      "event_types": [
+        "cut_in",
+        "near_miss"
+      ]
+    },
+    {
+      "clip_id": "av2_0010_nearmiss",
+      "scenario_id": "01cf2434-2b72-41fd-8fd8-439038f90959",
+      "city": "pittsburgh",
+      "split": "val",
+      "file": "clips/av2_0010_nearmiss.csv",
+      "sha256_16": "b7ce9ac2bf2adf85",
+      "frames": 50,
+      "mean_speed_kph": 11.3,
+      "max_objects": 8,
+      "event_types": [
+        "cut_in",
+        "near_miss"
+      ]
+    },
+    {
+      "clip_id": "av2_0011_nearmiss",
+      "scenario_id": "01f85d76-2704-4640-b28b-570594232599",
+      "city": "miami",
+      "split": "val",
+      "file": "clips/av2_0011_nearmiss.csv",
+      "sha256_16": "e6292e4ea8d41b4a",
+      "frames": 50,
+      "mean_speed_kph": 16.2,
+      "max_objects": 24,
+      "event_types": [
+        "cut_in",
+        "near_miss"
+      ]
+    },
+    {
+      "clip_id": "av2_0012_nearmiss",
+      "scenario_id": "020eb6fa-c82e-40cc-bd37-ae6992391142",
+      "city": "miami",
+      "split": "val",
+      "file": "clips/av2_0012_nearmiss.csv",
+      "sha256_16": "1233340e1f8402fe",
+      "frames": 50,
+      "mean_speed_kph": 9.5,
+      "max_objects": 15,
+      "event_types": [
+        "cut_in",
+        "near_miss"
+      ]
+    },
+    {
+      "clip_id": "av2_0013_nearmiss",
+      "scenario_id": "022dc6e2-adc2-4991-988a-d85957d41262",
+      "city": "palo-alto",
+      "split": "val",
+      "file": "clips/av2_0013_nearmiss.csv",
+      "sha256_16": "c768d8dcf1462bbe",
+      "frames": 50,
+      "mean_speed_kph": 20.9,
+      "max_objects": 12,
+      "event_types": [
+        "near_miss"
+      ]
+    },
+    {
+      "clip_id": "av2_0014_nearmiss",
+      "scenario_id": "0388916e-09e1-4749-b896-0c81cfb8e227",
+      "city": "austin",
+      "split": "val",
+      "file": "clips/av2_0014_nearmiss.csv",
+      "sha256_16": "007128c7047b0e8b",
+      "frames": 50,
+      "mean_speed_kph": 16.8,
+      "max_objects": 14,
+      "event_types": [
+        "near_miss"
+      ]
+    },
+    {
+      "clip_id": "av2_0015_nearmiss",
+      "scenario_id": "001cbde0-dfca-40ff-ab9c-38230e96d03b",
+      "city": "washington-dc",
+      "split": "train",
+      "file": "clips/av2_0015_nearmiss.csv",
+      "sha256_16": "162256b4456527db",
+      "frames": 50,
+      "mean_speed_kph": 19.5,
+      "max_objects": 24,
+      "event_types": [
+        "cut_in",
+        "near_miss"
+      ]
+    },
+    {
+      "clip_id": "av2_0016_nearmiss",
+      "scenario_id": "00230624-044b-4bb0-86fb-c3214060a7b8",
+      "city": "pittsburgh",
+      "split": "train",
+      "file": "clips/av2_0016_nearmiss.csv",
+      "sha256_16": "f807185a29f0cf1f",
+      "frames": 50,
+      "mean_speed_kph": 38.3,
+      "max_objects": 10,
+      "event_types": [
+        "cut_in",
+        "near_miss"
+      ]
+    },
+    {
+      "clip_id": "av2_0017_vru",
+      "scenario_id": "00ef7d7b-4709-4429-8714-48cfea6b4dde",
+      "city": "miami",
+      "split": "val",
+      "file": "clips/av2_0017_vru.csv",
+      "sha256_16": "70c858fbc1d03378",
+      "frames": 50,
+      "mean_speed_kph": 9.5,
+      "max_objects": 13,
+      "event_types": [
+        "cut_in",
+        "near_miss",
+        "vru_sudden"
+      ]
+    },
+    {
+      "clip_id": "av2_0018_vru",
+      "scenario_id": "00f65fe7-7d7c-4feb-9618-2742362cc12f",
+      "city": "pittsburgh",
+      "split": "val",
+      "file": "clips/av2_0018_vru.csv",
+      "sha256_16": "2ba723e1df1ae8c7",
+      "frames": 50,
+      "mean_speed_kph": 3.5,
+      "max_objects": 21,
+      "event_types": [
+        "vru_sudden"
+      ]
+    },
+    {
+      "clip_id": "av2_0019_vru",
+      "scenario_id": "04760083-b2f0-4519-92d4-b07f31e3c512",
+      "city": "austin",
+      "split": "val",
+      "file": "clips/av2_0019_vru.csv",
+      "sha256_16": "f54447cba4de091b",
+      "frames": 50,
+      "mean_speed_kph": 5.8,
+      "max_objects": 21,
+      "event_types": [
+        "vru_sudden"
+      ]
+    },
+    {
+      "clip_id": "av2_0020_negative",
+      "scenario_id": "00062a32-8d6d-4449-9948-6fedac67bfcd",
+      "city": "washington-dc",
+      "split": "val",
+      "file": "clips/av2_0020_negative.csv",
+      "sha256_16": "55426114d98d0d58",
+      "frames": 50,
+      "mean_speed_kph": 0.0,
+      "max_objects": 24,
+      "event_types": []
+    },
+    {
+      "clip_id": "av2_0021_negative",
+      "scenario_id": "0006ca28-fcbb-4ae2-9d9e-951fa3b41c1c",
+      "city": "pittsburgh",
+      "split": "val",
+      "file": "clips/av2_0021_negative.csv",
+      "sha256_16": "0a7f3e99b1837cd3",
+      "frames": 50,
+      "mean_speed_kph": 36.1,
+      "max_objects": 6,
+      "event_types": []
+    },
+    {
+      "clip_id": "av2_0022_negative",
+      "scenario_id": "0007df76-c9a2-47aa-83bf-3b2b414109c9",
+      "city": "palo-alto",
+      "split": "val",
+      "file": "clips/av2_0022_negative.csv",
+      "sha256_16": "ae7c3c18a9ea19b8",
+      "frames": 50,
+      "mean_speed_kph": 17.7,
+      "max_objects": 24,
+      "event_types": []
+    },
+    {
+      "clip_id": "av2_0023_negative",
+      "scenario_id": "0015197d-b916-43b6-bcaa-8a7d90d7b87d",
+      "city": "pittsburgh",
+      "split": "val",
+      "file": "clips/av2_0023_negative.csv",
+      "sha256_16": "623c7970738d4ce9",
+      "frames": 50,
+      "mean_speed_kph": 16.8,
+      "max_objects": 24,
+      "event_types": []
+    },
+    {
+      "clip_id": "av2_0024_negative",
+      "scenario_id": "00404e6d-ff66-460e-8f22-bc61fc9f7f9d",
+      "city": "washington-dc",
+      "split": "val",
+      "file": "clips/av2_0024_negative.csv",
+      "sha256_16": "d4bc30ed53634be5",
+      "frames": 50,
+      "mean_speed_kph": 31.7,
+      "max_objects": 20,
+      "event_types": []
+    },
+    {
+      "clip_id": "av2_0025_negative",
+      "scenario_id": "02509248-5f65-4af6-bc9a-a88369bf32c2",
+      "city": "austin",
+      "split": "val",
+      "file": "clips/av2_0025_negative.csv",
+      "sha256_16": "3fa7f5915d1fd614",
+      "frames": 50,
+      "mean_speed_kph": 54.8,
+      "max_objects": 11,
+      "event_types": []
+    },
+    {
+      "clip_id": "av2_0026_negative",
+      "scenario_id": "041d6736-34a9-4474-a91a-d3ea0f3b9a29",
+      "city": "miami",
+      "split": "val",
+      "file": "clips/av2_0026_negative.csv",
+      "sha256_16": "b59a69526b8e2428",
+      "frames": 50,
+      "mean_speed_kph": 46.3,
+      "max_objects": 20,
+      "event_types": []
+    },
+    {
+      "clip_id": "av2_0027_negative",
+      "scenario_id": "0123336f-afc6-4704-9ed0-efc5bea121f0",
+      "city": "palo-alto",
+      "split": "val",
+      "file": "clips/av2_0027_negative.csv",
+      "sha256_16": "20f92e97ee5626a5",
+      "frames": 50,
+      "mean_speed_kph": 51.8,
+      "max_objects": 15,
+      "event_types": []
+    },
+    {
+      "clip_id": "av2_0028_negative",
+      "scenario_id": "03dd6505-37c2-4032-bf3a-7a5dc95caa36",
+      "city": "pittsburgh",
+      "split": "val",
+      "file": "clips/av2_0028_negative.csv",
+      "sha256_16": "1b44294a9396f5cc",
+      "frames": 50,
+      "mean_speed_kph": 38.9,
+      "max_objects": 8,
+      "event_types": []
+    },
+    {
+      "clip_id": "av2_0029_negative",
+      "scenario_id": "02382383-9a0f-4654-8a6f-468d285ae847",
+      "city": "washington-dc",
+      "split": "val",
+      "file": "clips/av2_0029_negative.csv",
+      "sha256_16": "dc9d3e04b5a9d5d6",
+      "frames": 50,
+      "mean_speed_kph": 53.9,
+      "max_objects": 19,
+      "event_types": []
+    },
+    {
+      "clip_id": "av2_0030_negative",
+      "scenario_id": "0092658a-5705-4a48-9de0-195b430c03f8",
+      "city": "dearborn",
+      "split": "val",
+      "file": "clips/av2_0030_negative.csv",
+      "sha256_16": "5f334278c4eaa8a9",
+      "frames": 50,
+      "mean_speed_kph": 54.8,
+      "max_objects": 21,
+      "event_types": []
+    }
+  ]
+}
