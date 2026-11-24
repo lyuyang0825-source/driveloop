@@ -1,0 +1,47 @@
+{
+  "run": "candidate-v2",
+  "scenarios": [
+    {
+      "id": "SC-001",
+      "min_ttc": 1.4,
+      "max_decel": -8.6,
+      "collision": true,
+      "interventions": 1
+    },
+    {
+      "id": "SC-002",
+      "min_ttc": 1.7,
+      "max_decel": -7.8,
+      "collision": false,
+      "interventions": 1
+    },
+    {
+      "id": "SC-003",
+      "min_ttc": 2.05,
+      "max_decel": -7.9,
+      "collision": false,
+      "interventions": 0
+    },
+    {
+      "id": "SC-004",
+      "min_ttc": 3.45,
+      "max_decel": -3.2,
+      "collision": false,
+      "interventions": 0
+    },
+    {
+      "id": "SC-005",
+      "min_ttc": 3.45,
+      "max_decel": -3.2,
+      "collision": false,
+      "interventions": 0
+    },
+    {
+      "id": "SC-006",
+      "min_ttc": 3.45,
+      "max_decel": -3.2,
+      "collision": false,
+      "interventions": 0
+    }
+  ]
+}

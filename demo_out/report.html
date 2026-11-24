@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>driveloop 长尾场景报告</title>
+<style>
+:root{color-scheme:dark}
+body{margin:0;padding:40px;background:#0b0b12;color:#e9eaf0;font:15px/1.65 -apple-system,"Noto Sans CJK SC",sans-serif}
+h1{font-size:26px;margin:0 0 6px} h2{margin-top:40px;font-size:19px} h3{font-size:16px;margin:0 0 8px}
+.muted{color:#9aa0b4} .mono{font-family:ui-monospace,Menlo,monospace;font-size:13px}
+.wrap{max-width:1180px;margin:0 auto}
+.kpis{display:flex;gap:14px;margin:24px 0;flex-wrap:wrap}
+.kpi{background:#141422;border:1px solid #23233a;border-radius:12px;padding:14px 20px;min-width:120px}
+.kpi b{display:block;font-size:24px} .kpi span{color:#9aa0b4;font-size:12px}
+table{width:100%;border-collapse:collapse;margin-top:12px;font-size:13px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid #23233a;vertical-align:top}
+th{color:#9aa0b4;font-weight:500;font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+.tag{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12px}
+.card{background:#12121e;border:1px solid #23233a;border-radius:12px;padding:16px 20px;margin:14px 0}
+.card p{margin:4px 0}
+footer{margin-top:48px;color:#6f7488;font-size:12px}
+</style></head><body><div class="wrap">
+<h1>driveloop · 长尾场景挖掘报告</h1>
+<p class="muted">日志 urban_90s.csv｜901 帧 / 90s｜
+检测器 rule-v1｜生成 2026-11-24T11:17:57+08:00</p>
+<div class="kpis">
+  <div class="kpi"><b>6</b><span>场景总数</span></div>
+  <div class="kpi"><b style="color:#ff5c62">2</b><span>高危（≥70）</span></div>
+  <div class="kpi"><b style="color:#ffc46e">2</b><span>中等（45–69）</span></div>
+  <div class="kpi"><b>6.7</b><span>每百秒场景</span></div>
+</div>
+<h2>场景清单</h2>
+<table><thead><tr><th>ID</th><th>主类型</th><th>时间窗</th><th>风险</th><th>TTC(s)</th><th>峰值减速度</th><th>ODD</th><th>事件</th></tr></thead>
+<tbody><tr><td class='mono'>SC-001</td><td>旁车切入</td><td class='mono'>11.8–13.9s</td><td><span class='tag' style='background:#ffc46e22;color:#ffc46e'>中等 60</span></td><td class='mono'>3.0</td><td class='mono'>—</td><td>clear / 1000m / urban</td><td>cut_in @11.8s<br>near_miss @11.8s</td></tr><tr><td class='mono'>SC-002</td><td>行人/两轮车突入</td><td class='mono'>27.0–32.0s</td><td><span class='tag' style='background:#ff5c6222;color:#ff5c62'>高危 70</span></td><td class='mono'>1.44</td><td class='mono'>—</td><td>clear / 1000m / urban</td><td>vru_sudden @27.0s<br>near_miss @29.2s</td></tr><tr><td class='mono'>SC-003</td><td>近碰撞（低 TTC）</td><td class='mono'>38.0–41.9s</td><td><span class='tag' style='background:#ffc46e22;color:#ffc46e'>中等 65</span></td><td class='mono'>1.2</td><td class='mono'>-8.45</td><td>clear / 1000m / urban</td><td>near_miss @38.0s<br>hard_brake @40.9s</td></tr><tr><td class='mono'>SC-004</td><td>驾驶员接管</td><td class='mono'>55.0–60.0s</td><td><span class='tag' style='background:#ff5c6222;color:#ff5c62'>高危 70</span></td><td class='mono'>—</td><td class='mono'>—</td><td>clear / 1000m / urban</td><td>takeover @55.0s</td></tr><tr><td class='mono'>SC-005</td><td>低能见度</td><td class='mono'>68.0–82.0s</td><td><span class='tag' style='background:#7adcb422;color:#7adcb4'>低 35</span></td><td class='mono'>—</td><td class='mono'>—</td><td>fog / 30m / urban</td><td>low_visibility @68.0s</td></tr><tr><td class='mono'>SC-006</td><td>施工路段</td><td class='mono'>85.0–90.0s</td><td><span class='tag' style='background:#7adcb422;color:#7adcb4'>低 25</span></td><td class='mono'>—</td><td class='mono'>—</td><td>clear / 1000m / construction</td><td>construction @85.0s</td></tr></tbody></table>
+
+<h2>回归门禁</h2>
+<p class="muted">结论：<b>block</b>（fail 2 / warn 0 / pass 4）</p>
+<table><thead><tr><th>场景</th><th>基线 TTC</th><th>候选 TTC</th><th>基线减速度</th><th>候选减速度</th><th>碰撞</th><th>状态</th><th>原因</th></tr></thead>
+<tbody><tr><td class='mono'>SC-001</td><td class='mono'>3.0</td><td class='mono'>1.4</td><td class='mono'>-3.0</td><td class='mono'>-8.6</td><td class='mono'>是</td><td><span class='tag' style='background:#ff5c6222;color:#ff5c62'>fail</span></td><td>候选版本出现新碰撞；最小 TTC 1.4s 低于阈值 2.0s；峰值减速度 -8.6m/s² 超过 -8.0m/s²</td></tr><tr><td class='mono'>SC-002</td><td class='mono'>1.44</td><td class='mono'>1.7</td><td class='mono'>-3.0</td><td class='mono'>-7.8</td><td class='mono'>否</td><td><span class='tag' style='background:#ff5c6222;color:#ff5c62'>fail</span></td><td>最小 TTC 1.7s 低于阈值 2.0s</td></tr><tr><td class='mono'>SC-003</td><td class='mono'>1.2</td><td class='mono'>2.05</td><td class='mono'>-8.45</td><td class='mono'>-7.9</td><td class='mono'>否</td><td><span class='tag' style='background:#7adcb422;color:#7adcb4'>pass</span></td><td>指标不劣于基线</td></tr><tr><td class='mono'>SC-004</td><td class='mono'>3.5</td><td class='mono'>3.45</td><td class='mono'>-3.0</td><td class='mono'>-3.2</td><td class='mono'>否</td><td><span class='tag' style='background:#7adcb422;color:#7adcb4'>pass</span></td><td>指标不劣于基线</td></tr><tr><td class='mono'>SC-005</td><td class='mono'>3.5</td><td class='mono'>3.45</td><td class='mono'>-3.0</td><td class='mono'>-3.2</td><td class='mono'>否</td><td><span class='tag' style='background:#7adcb422;color:#7adcb4'>pass</span></td><td>指标不劣于基线</td></tr><tr><td class='mono'>SC-006</td><td class='mono'>3.5</td><td class='mono'>3.45</td><td class='mono'>-3.0</td><td class='mono'>-3.2</td><td class='mono'>否</td><td><span class='tag' style='background:#7adcb422;color:#7adcb4'>pass</span></td><td>指标不劣于基线</td></tr></tbody></table>
+
+<h2>场景卡</h2>
+<section class='card'><h3>SC-001 · 旁车切入｜11.8–13.9s</h3><p class='muted'>触发：cut_in {&#x27;dist_m&#x27;: 21.7, &#x27;lat_m&#x27;: -0.32, &#x27;cls&#x27;: &#x27;car&#x27;}｜关键帧 11.8s｜自车 42.3km/h</p><p>建议标注：TTC、切入后 TTC、切入起始帧、是否在规划路径内、是否打灯、横向速度、目标类别、相对距离、相对速度、车道归属</p><p>回归断言：切入后 1.5s 内横向跟踪误差 &lt; 0.5m；TTC ≥ 2.0s 或已完成避让；最小 TTC ≥ 2.0s；全程无碰撞；峰值减速度不超过 8m/s²</p></section><section class='card'><h3>SC-002 · 行人/两轮车突入｜27.0–32.0s</h3><p class='muted'>触发：vru_sudden {&#x27;dist_m&#x27;: 19.6, &#x27;cls&#x27;: &#x27;pedestrian&#x27;, &#x27;ttc_s&#x27;: 7.06}｜关键帧 27.0s｜自车 41.1km/h</p><p>建议标注：TTC、是否在规划路径内、横向速度、目标类别、相对距离、相对速度、行人类别、运动意图、进入路径时间、遮挡情况</p><p>回归断言：最小 TTC ≥ 2.0s；全程无碰撞；峰值减速度不超过 8m/s²；目标进入路径 0.3s 内被检出；30m 内开始减速；无碰撞</p></section><section class='card'><h3>SC-003 · 近碰撞（低 TTC）｜38.0–41.9s</h3><p class='muted'>触发：near_miss {&#x27;ttc_s&#x27;: 1.2, &#x27;dist_m&#x27;: 6.0, &#x27;cls&#x27;: &#x27;car&#x27;}｜关键帧 41.4s｜自车 12.0km/h</p><p>建议标注：TTC、制动触发原因、制动距离、后车距离、峰值减速度、是否在规划路径内、目标类别、相对距离、相对速度</p><p>回归断言：制动响应延迟 &lt; 0.3s；制动距离不超过标定值；后车 TTC ≥ 1.5s；最小 TTC ≥ 2.0s；全程无碰撞；峰值减速度不超过 8m/s²</p></section><section class='card'><h3>SC-004 · 驾驶员接管｜55.0–60.0s</h3><p class='muted'>触发：takeover {&#x27;state&#x27;: &#x27;takeover&#x27;}｜关键帧 55.0s｜自车 30.0km/h</p><p>建议标注：接管原因、接管时刻、系统状态、驾驶员动作</p><p>回归断言：接管提示提前 ≥ 2s；交接后 1s 内横向抖动 &lt; 0.2m</p></section><section class='card'><h3>SC-005 · 低能见度｜68.0–82.0s</h3><p class='muted'>触发：low_visibility {&#x27;visibility_m&#x27;: 30.0, &#x27;weather&#x27;: &#x27;fog&#x27;}｜关键帧 68.0s｜自车 46.0km/h</p><p>建议标注：传感器置信度、天气、灯光状态、能见度</p><p>回归断言：能见度 30m 下 AEB 仍触发；误检率不超过基线</p></section><section class='card'><h3>SC-006 · 施工路段｜85.0–90.0s</h3><p class='muted'>触发：construction {&#x27;road_type&#x27;: &#x27;construction&#x27;}｜关键帧 85.0s｜自车 27.0km/h</p><p>建议标注：临时限速、施工人员、车道线缺失、锥桶/围挡</p><p>回归断言：识别临时限速；锥桶区域不越界</p></section>
+<footer>规则基线输出，仅用于数据筛选与回归排序；场景卡不构成安全认证结论。合成日志仅用于演示链路。</footer>
+</div></body></html>

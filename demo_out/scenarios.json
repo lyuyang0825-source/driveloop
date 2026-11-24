@@ -1,0 +1,420 @@
+[
+  {
+    "scenario_id": "SC-001",
+    "title": "旁车切入｜11.8–13.9s",
+    "primary": "cut_in",
+    "types": [
+      "cut_in",
+      "near_miss"
+    ],
+    "time_window": [
+      11.8,
+      13.9
+    ],
+    "key_frame_t": 11.8,
+    "risk": 60,
+    "severity": "medium",
+    "trigger": {
+      "event": "cut_in",
+      "detail": {
+        "dist_m": 21.7,
+        "lat_m": -0.32,
+        "cls": "car"
+      },
+      "events": [
+        {
+          "type": "cut_in",
+          "t": 11.8,
+          "detail": {
+            "dist_m": 21.7,
+            "lat_m": -0.32,
+            "cls": "car"
+          }
+        },
+        {
+          "type": "near_miss",
+          "t": 11.8,
+          "detail": {
+            "ttc_s": 3.0,
+            "dist_m": 16.6,
+            "cls": "car"
+          }
+        }
+      ]
+    },
+    "odd": {
+      "weather": "clear",
+      "visibility_m": 1000.0,
+      "road_type": "urban",
+      "speed_limit_kph": 50.0
+    },
+    "ego_speed_kph": 42.3,
+    "metrics": {
+      "min_ttc_s": 3.0,
+      "max_decel_mps2": null,
+      "duration_s": 2.1
+    },
+    "involved": [
+      "v-cutin"
+    ],
+    "suggested_labels": [
+      "TTC",
+      "切入后 TTC",
+      "切入起始帧",
+      "是否在规划路径内",
+      "是否打灯",
+      "横向速度",
+      "目标类别",
+      "相对距离",
+      "相对速度",
+      "车道归属"
+    ],
+    "regression_assertions": [
+      "切入后 1.5s 内横向跟踪误差 < 0.5m",
+      "TTC ≥ 2.0s 或已完成避让",
+      "最小 TTC ≥ 2.0s",
+      "全程无碰撞",
+      "峰值减速度不超过 8m/s²"
+    ],
+    "replay": {
+      "start_s": 11.8,
+      "end_s": 13.9
+    }
+  },
+  {
+    "scenario_id": "SC-002",
+    "title": "行人/两轮车突入｜27.0–32.0s",
+    "primary": "vru_sudden",
+    "types": [
+      "near_miss",
+      "vru_sudden"
+    ],
+    "time_window": [
+      27.0,
+      32.0
+    ],
+    "key_frame_t": 27.0,
+    "risk": 70,
+    "severity": "high",
+    "trigger": {
+      "event": "vru_sudden",
+      "detail": {
+        "dist_m": 19.6,
+        "cls": "pedestrian",
+        "ttc_s": 7.06
+      },
+      "events": [
+        {
+          "type": "vru_sudden",
+          "t": 27.0,
+          "detail": {
+            "dist_m": 19.6,
+            "cls": "pedestrian",
+            "ttc_s": 7.06
+          }
+        },
+        {
+          "type": "near_miss",
+          "t": 29.2,
+          "detail": {
+            "ttc_s": 1.44,
+            "dist_m": 4.0,
+            "cls": "pedestrian"
+          }
+        }
+      ]
+    },
+    "odd": {
+      "weather": "clear",
+      "visibility_m": 1000.0,
+      "road_type": "urban",
+      "speed_limit_kph": 50.0
+    },
+    "ego_speed_kph": 41.1,
+    "metrics": {
+      "min_ttc_s": 1.44,
+      "max_decel_mps2": null,
+      "duration_s": 5.0
+    },
+    "involved": [
+      "p-1"
+    ],
+    "suggested_labels": [
+      "TTC",
+      "是否在规划路径内",
+      "横向速度",
+      "目标类别",
+      "相对距离",
+      "相对速度",
+      "行人类别",
+      "运动意图",
+      "进入路径时间",
+      "遮挡情况"
+    ],
+    "regression_assertions": [
+      "最小 TTC ≥ 2.0s",
+      "全程无碰撞",
+      "峰值减速度不超过 8m/s²",
+      "目标进入路径 0.3s 内被检出",
+      "30m 内开始减速",
+      "无碰撞"
+    ],
+    "replay": {
+      "start_s": 27.0,
+      "end_s": 32.0
+    }
+  },
+  {
+    "scenario_id": "SC-003",
+    "title": "近碰撞（低 TTC）｜38.0–41.9s",
+    "primary": "near_miss",
+    "types": [
+      "hard_brake",
+      "near_miss"
+    ],
+    "time_window": [
+      38.0,
+      41.9
+    ],
+    "key_frame_t": 41.4,
+    "risk": 65,
+    "severity": "medium",
+    "trigger": {
+      "event": "near_miss",
+      "detail": {
+        "ttc_s": 1.2,
+        "dist_m": 6.0,
+        "cls": "car"
+      },
+      "events": [
+        {
+          "type": "near_miss",
+          "t": 38.0,
+          "detail": {
+            "ttc_s": 1.2,
+            "dist_m": 6.0,
+            "cls": "car"
+          }
+        },
+        {
+          "type": "hard_brake",
+          "t": 40.9,
+          "detail": {
+            "accel_mps2": -8.45
+          }
+        }
+      ]
+    },
+    "odd": {
+      "weather": "clear",
+      "visibility_m": 1000.0,
+      "road_type": "urban",
+      "speed_limit_kph": 50.0
+    },
+    "ego_speed_kph": 12.0,
+    "metrics": {
+      "min_ttc_s": 1.2,
+      "max_decel_mps2": -8.45,
+      "duration_s": 3.9
+    },
+    "involved": [
+      "v-lead"
+    ],
+    "suggested_labels": [
+      "TTC",
+      "制动触发原因",
+      "制动距离",
+      "后车距离",
+      "峰值减速度",
+      "是否在规划路径内",
+      "目标类别",
+      "相对距离",
+      "相对速度"
+    ],
+    "regression_assertions": [
+      "制动响应延迟 < 0.3s",
+      "制动距离不超过标定值",
+      "后车 TTC ≥ 1.5s",
+      "最小 TTC ≥ 2.0s",
+      "全程无碰撞",
+      "峰值减速度不超过 8m/s²"
+    ],
+    "replay": {
+      "start_s": 38.0,
+      "end_s": 41.9
+    }
+  },
+  {
+    "scenario_id": "SC-004",
+    "title": "驾驶员接管｜55.0–60.0s",
+    "primary": "takeover",
+    "types": [
+      "takeover"
+    ],
+    "time_window": [
+      55.0,
+      60.0
+    ],
+    "key_frame_t": 55.0,
+    "risk": 70,
+    "severity": "high",
+    "trigger": {
+      "event": "takeover",
+      "detail": {
+        "state": "takeover"
+      },
+      "events": [
+        {
+          "type": "takeover",
+          "t": 55.0,
+          "detail": {
+            "state": "takeover"
+          }
+        }
+      ]
+    },
+    "odd": {
+      "weather": "clear",
+      "visibility_m": 1000.0,
+      "road_type": "urban",
+      "speed_limit_kph": 50.0
+    },
+    "ego_speed_kph": 30.0,
+    "metrics": {
+      "min_ttc_s": null,
+      "max_decel_mps2": null,
+      "duration_s": 5.0
+    },
+    "involved": [],
+    "suggested_labels": [
+      "接管原因",
+      "接管时刻",
+      "系统状态",
+      "驾驶员动作"
+    ],
+    "regression_assertions": [
+      "接管提示提前 ≥ 2s",
+      "交接后 1s 内横向抖动 < 0.2m"
+    ],
+    "replay": {
+      "start_s": 55.0,
+      "end_s": 60.0
+    }
+  },
+  {
+    "scenario_id": "SC-005",
+    "title": "低能见度｜68.0–82.0s",
+    "primary": "low_visibility",
+    "types": [
+      "low_visibility"
+    ],
+    "time_window": [
+      68.0,
+      82.0
+    ],
+    "key_frame_t": 68.0,
+    "risk": 35,
+    "severity": "low",
+    "trigger": {
+      "event": "low_visibility",
+      "detail": {
+        "visibility_m": 30.0,
+        "weather": "fog"
+      },
+      "events": [
+        {
+          "type": "low_visibility",
+          "t": 68.0,
+          "detail": {
+            "visibility_m": 30.0,
+            "weather": "fog"
+          }
+        }
+      ]
+    },
+    "odd": {
+      "weather": "fog",
+      "visibility_m": 30.0,
+      "road_type": "urban",
+      "speed_limit_kph": 50.0
+    },
+    "ego_speed_kph": 46.0,
+    "metrics": {
+      "min_ttc_s": null,
+      "max_decel_mps2": null,
+      "duration_s": 14.0
+    },
+    "involved": [],
+    "suggested_labels": [
+      "传感器置信度",
+      "天气",
+      "灯光状态",
+      "能见度"
+    ],
+    "regression_assertions": [
+      "能见度 30m 下 AEB 仍触发",
+      "误检率不超过基线"
+    ],
+    "replay": {
+      "start_s": 68.0,
+      "end_s": 82.0
+    }
+  },
+  {
+    "scenario_id": "SC-006",
+    "title": "施工路段｜85.0–90.0s",
+    "primary": "construction",
+    "types": [
+      "construction"
+    ],
+    "time_window": [
+      85.0,
+      90.0
+    ],
+    "key_frame_t": 85.0,
+    "risk": 25,
+    "severity": "low",
+    "trigger": {
+      "event": "construction",
+      "detail": {
+        "road_type": "construction"
+      },
+      "events": [
+        {
+          "type": "construction",
+          "t": 85.0,
+          "detail": {
+            "road_type": "construction"
+          }
+        }
+      ]
+    },
+    "odd": {
+      "weather": "clear",
+      "visibility_m": 1000.0,
+      "road_type": "construction",
+      "speed_limit_kph": 30.0
+    },
+    "ego_speed_kph": 27.0,
+    "metrics": {
+      "min_ttc_s": null,
+      "max_decel_mps2": null,
+      "duration_s": 5.0
+    },
+    "involved": [],
+    "suggested_labels": [
+      "临时限速",
+      "施工人员",
+      "车道线缺失",
+      "锥桶/围挡"
+    ],
+    "regression_assertions": [
+      "识别临时限速",
+      "锥桶区域不越界"
+    ],
+    "replay": {
+      "start_s": 85.0,
+      "end_s": 90.0
+    }
+  }
+]

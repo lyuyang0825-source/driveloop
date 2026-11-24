@@ -1,0 +1,112 @@
+{
+  "gate": {
+    "decision": "block",
+    "fail": 2,
+    "warn": 0,
+    "pass": 4,
+    "failed_ids": [
+      "SC-001",
+      "SC-002"
+    ]
+  },
+  "comparisons": [
+    {
+      "scenario_id": "SC-001",
+      "baseline_ttc": 3.0,
+      "candidate_ttc": 1.4,
+      "baseline_decel": -3.0,
+      "candidate_decel": -8.6,
+      "baseline_collision": false,
+      "candidate_collision": true,
+      "baseline_interventions": 0,
+      "candidate_interventions": 1,
+      "status": "fail",
+      "reasons": [
+        "候选版本出现新碰撞",
+        "最小 TTC 1.4s 低于阈值 2.0s",
+        "峰值减速度 -8.6m/s² 超过 -8.0m/s²"
+      ],
+      "ttc_delta": -1.6
+    },
+    {
+      "scenario_id": "SC-002",
+      "baseline_ttc": 1.44,
+      "candidate_ttc": 1.7,
+      "baseline_decel": -3.0,
+      "candidate_decel": -7.8,
+      "baseline_collision": false,
+      "candidate_collision": false,
+      "baseline_interventions": 0,
+      "candidate_interventions": 1,
+      "status": "fail",
+      "reasons": [
+        "最小 TTC 1.7s 低于阈值 2.0s"
+      ],
+      "ttc_delta": 0.26
+    },
+    {
+      "scenario_id": "SC-003",
+      "baseline_ttc": 1.2,
+      "candidate_ttc": 2.05,
+      "baseline_decel": -8.45,
+      "candidate_decel": -7.9,
+      "baseline_collision": false,
+      "candidate_collision": false,
+      "baseline_interventions": 0,
+      "candidate_interventions": 0,
+      "status": "pass",
+      "reasons": [
+        "指标不劣于基线"
+      ],
+      "ttc_delta": 0.85
+    },
+    {
+      "scenario_id": "SC-004",
+      "baseline_ttc": 3.5,
+      "candidate_ttc": 3.45,
+      "baseline_decel": -3.0,
+      "candidate_decel": -3.2,
+      "baseline_collision": false,
+      "candidate_collision": false,
+      "baseline_interventions": 0,
+      "candidate_interventions": 0,
+      "status": "pass",
+      "reasons": [
+        "指标不劣于基线"
+      ],
+      "ttc_delta": -0.05
+    },
+    {
+      "scenario_id": "SC-005",
+      "baseline_ttc": 3.5,
+      "candidate_ttc": 3.45,
+      "baseline_decel": -3.0,
+      "candidate_decel": -3.2,
+      "baseline_collision": false,
+      "candidate_collision": false,
+      "baseline_interventions": 0,
+      "candidate_interventions": 0,
+      "status": "pass",
+      "reasons": [
+        "指标不劣于基线"
+      ],
+      "ttc_delta": -0.05
+    },
+    {
+      "scenario_id": "SC-006",
+      "baseline_ttc": 3.5,
+      "candidate_ttc": 3.45,
+      "baseline_decel": -3.0,
+      "candidate_decel": -3.2,
+      "baseline_collision": false,
+      "candidate_collision": false,
+      "baseline_interventions": 0,
+      "candidate_interventions": 0,
+      "status": "pass",
+      "reasons": [
+        "指标不劣于基线"
+      ],
+      "ttc_delta": -0.05
+    }
+  ]
+}

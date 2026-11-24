@@ -1,0 +1,7 @@
+id,types,start_s,end_s,risk,severity,min_ttc_s,max_decel,weather,road
+SC-001,cut_in+near_miss,11.8,13.9,60,medium,3.0,,clear,urban
+SC-002,near_miss+vru_sudden,27.0,32.0,70,high,1.44,,clear,urban
+SC-003,hard_brake+near_miss,38.0,41.9,65,medium,1.2,-8.45,clear,urban
+SC-004,takeover,55.0,60.0,70,high,,,clear,urban
+SC-005,low_visibility,68.0,82.0,35,low,,,fog,urban
+SC-006,construction,85.0,90.0,25,low,,,clear,construction

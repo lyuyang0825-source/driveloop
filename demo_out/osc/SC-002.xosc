@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 由 driveloop 自动生成：最小可执行骨架，roadId / laneId / 路线需按项目地图绑定 -->
+<OpenSCENARIO>
+  <FileHeader revMajor="1" revMinor="2" date="2026-11-24T10:00:00" description="行人/两轮车突入｜27.0–32.0s" author="driveloop"/>
+  <RoadNetwork>
+    <LogicFile file="map.xodr"/>
+  </RoadNetwork>
+  <Entities>
+    <ScenarioObject name="Ego">
+      <Vehicle name="ego" vehicleCategory="car">
+        <BoundingRectangle length="4.8" width="1.9" height="1.6"/>
+        <Performance maxSpeed="60" maxAcceleration="4" maxDeceleration="9"/>
+        <Axles><FrontAxle maxSteering="0.5" wheelDiameter="0.6" trackWidth="1.6" positionX="1.4" positionZ="0.3"/></Axles>
+      </Vehicle>
+    </ScenarioObject>
+    <ScenarioObject name="Target">
+      <Vehicle name="target" vehicleCategory="car">
+        <BoundingRectangle length="4.5" width="1.8" height="1.5"/>
+      </Vehicle>
+    </ScenarioObject>
+  </Entities>
+  <Storyboard>
+    <Init>
+      <Actions>
+        <PrivateAction>
+          <TeleportAction>
+            <Position><LanePosition roadId="1" laneId="-1" s="0"/></Position>
+          </TeleportAction>
+        </PrivateAction>
+        <PrivateAction>
+          <SpeedAction>
+            <SpeedActionDynamics dynamicsShape="step" value="0"/>
+            <SpeedTargetValueType value="absolute"/>
+            <TargetAbsolute><Value value="11.416666666666666"/></TargetAbsolute>
+          </SpeedAction>
+        </PrivateAction>
+      </Actions>
+    </Init>
+    <Story name="行人/两轮车突入｜27.0–32.0s">
+      <Act name="Act">
+        <ManeuverGroup name="TargetBehavior" maximumExecutionCount="1">
+          <Actors><EntityRef entityRef="Target"/></Actors>
+          <Maneuver name="Maneuver">
+            <Event name="TriggerEvent" priority="override">
+              <Action>
+                <PrivateAction>
+                  <LongitudinalDistanceAction continuous="false" distance="19.6" freespace="true" entityRef="Ego">
+                    <DynamicConstraints maxAcceleration="3" maxDeceleration="6" maxSpeed="20"/>
+                  </LongitudinalDistanceAction>
+                </PrivateAction>
+              </Action>
+              <StartTrigger>
+                <ConditionGroup>
+                  <Condition name="Start" delay="0" conditionEdge="rising">
+                    <ByValueCondition>
+                      <SimulationTimeCondition value="27.0" rule="greaterThan"/>
+                    </ByValueCondition>
+                  </Condition>
+                </ConditionGroup>
+              </StartTrigger>
+            </Event>
+          </Maneuver>
+        </ManeuverGroup>
+        <StartTrigger><ConditionGroup><Condition name="ActStart" delay="0" conditionEdge="rising">
+          <ByValueCondition><SimulationTimeCondition value="0" rule="greaterThan"/></ByValueCondition>
+        </Condition></ConditionGroup></StartTrigger>
+        <StopTrigger><ConditionGroup><Condition name="ActStop" delay="0" conditionEdge="rising">
+          <ByValueCondition><SimulationTimeCondition value="32.0" rule="greaterThan"/></ByValueCondition>
+        </Condition></ConditionGroup></StopTrigger>
+      </Act>
+      <StopTrigger/>
+    </Story>
+    <StopTrigger>
+      <ConditionGroup><Condition name="End" delay="0" conditionEdge="rising">
+        <ByValueCondition><SimulationTimeCondition value="32.0" rule="greaterThan"/></ByValueCondition>
+      </Condition></ConditionGroup>
+    </StopTrigger>
+  </Storyboard>
+</OpenSCENARIO>
